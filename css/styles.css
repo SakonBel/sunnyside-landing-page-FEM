@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
 
 /* Font family template */
 /* {
@@ -22,6 +22,15 @@
   --very-dark-grayish-blue: hsl(213, 9%, 39%);
   --dark-grayish-blue: hsl(232, 10%, 55%);
   --grayish-blue: hsl(210, 4%, 67%);
+
+  /* Fonts */
+  --styling-font: "Fraunces", serif;
+  --main-font: "Barlow", sans-serif;
+
+  /* Font weight */
+  --bold: 900;
+  --medium: 700;
+  --main: 600;
 }
 
 * {
@@ -33,16 +42,26 @@
 }
 
 body {
-  background-color: var(--grayish-blue);
+  background-color: white;
+  font-family: var(--main-font);
   font-size: 18px;
+}
+
+button {
+  background-color: none;
+  border: none;
+  cursor: pointer;
 }
 
 img {
   display: block;
 }
 
+/* Header section */
+
 nav {
-  position: fixed;
+  position: relative;
+  background: #3ebfff;
   z-index: 3;
   width: 100%;
   padding: 30px;
@@ -86,6 +105,8 @@ nav {
   width: 1.8rem;
 }
 
+/* Hero section */
+
 .hero {
   position: relative;
 }
@@ -96,12 +117,12 @@ nav {
 }
 
 .statement {
-  font-family: 'Fraunces', serif;
-  font-weight: 900;
+  font-family: var(--styling-font);
+  font-weight: var(--bold);
+  font-size: 3rem;
   color: white;
   text-align: center;
   text-transform: uppercase;
-  font-size: 3rem;
   width: 80%;
   top: 25%;
   left: 10%;
@@ -117,6 +138,184 @@ nav {
   width: 100%;
 }
 
+/* Persuade section */
+
+.persuade {
+  text-align: center;
+  color: var(--dark-grayish-blue);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
 .persuade img {
   width: 100%;
+}
+
+.persuade h2,
+.persuade button {
+  font-family: var(--styling-font);
+  font-weight: var(--bold);
+  color: var(--very-dark-desaturated-blue);
+}
+
+.persuade h2 {
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.persuade button {
+  position: relative;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  margin: 30px;
+}
+
+.persuade button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  opacity: 30%;
+  border: 5px solid;
+  border-radius: 10px;
+  left: -5px;
+  bottom: -3px;
+  z-index: -1;
+}
+
+.transform button::before {
+  color: var(--yellow);
+}
+
+.stand-out button::before {
+  color: var(--soft-red);
+}
+
+.transform div,
+.stand-out div {
+  margin: 30px;
+}
+
+/* Skill section */
+
+.skill {
+  color: var(--dark-desaturated-cyan);
+}
+
+.skill img {
+  width: 100%;
+}
+
+.graphic-design,
+.photography {
+  position: relative;
+}
+
+.graphic-design div,
+.photography div {
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.skill h2 {
+  font-family: var(--styling-font);
+  font-weight: var(--bold);
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+/* Testimonial section */
+
+.testimonial {
+  text-align: center;
+  margin: 50px 30px;
+  color: var(--grayish-blue);
+}
+
+.testimonial h2 {
+  font-family: var(--styling-font);
+  font-weight: var(--bold);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.testimonial img {
+  margin: 50px auto;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.testimonial p {
+  color: var(--very-dark-grayish-blue);
+  margin-bottom: 30px;
+}
+
+.person {
+  font-family: var(--styling-font);
+  font-weight: var(--bold);
+  color: var(--very-dark-desaturated-blue);
+  line-height: 50px;
+}
+
+/* Gallery section */
+
+.set-one,
+.set-two {
+  display: flex;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+/* Footer section */
+
+footer {
+  color: var(--dark-desaturated-cyan);
+  background-color: #6bcbfe;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 60%;
+  background-color: var(--dark-desaturated-cyan);
+  background-blend-mode: color;
+  background-clip: text;
+  margin: 0 auto;
+}
+
+footer ul {
+  display: flex;
+  margin: 50px 0;
+}
+
+.footer-link {
+  width: 100%;
+  font-size: 1.25rem;
+  justify-content: space-between;
+}
+
+.contact-link {
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.contact-link li {
+  margin: 15px;
+}
+
+.contact-link img {
+  width: 25px;
+}
+
+footer a {
+  color: var(--dark-moderate-cyan);
+  font-weight: var(--medium);
 }
