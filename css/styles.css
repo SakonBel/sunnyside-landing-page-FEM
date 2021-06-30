@@ -64,7 +64,9 @@ nav {
   background: #3ebfff;
   z-index: 3;
   width: 100%;
+  height: 80px;
   padding: 30px;
+  transition: 0.5s;
 }
 
 .nav-list {
@@ -137,7 +139,7 @@ nav ul {
   text-transform: uppercase;
 }
 
-.nav-contact:hover {
+a:hover > .nav-contact {
   width: 100%;
   border-radius: 0;
 }
@@ -232,7 +234,6 @@ nav ul {
   content: "";
   position: absolute;
   width: 100%;
-  opacity: 30%;
   border: 5px solid;
   border-radius: 10px;
   left: -5px;
@@ -241,11 +242,23 @@ nav ul {
 }
 
 .transform button::before {
+  opacity: 30%;
   color: var(--yellow);
+  transition: 0.3s;
 }
 
 .stand-out button::before {
+  opacity: 30%;
   color: var(--soft-red);
+  transition: 0.3s;
+}
+
+.transform button:hover::before {
+  opacity: 1;
+}
+
+.stand-out button:hover::before {
+  opacity: 1;
 }
 
 .transform div,
@@ -333,17 +346,14 @@ nav ul {
 /* Footer section */
 
 footer {
-  color: var(--dark-desaturated-cyan);
+  /* color: var(--dark-desaturated-cyan); */
   background-color: #6bcbfe;
   padding: 60px 40px;
   text-align: center;
 }
 
 .footer-logo {
-  fill: var(--dark-desaturated-cyan);
   width: 60%;
-  background-color: var(--dark-desaturated-cyan);
-  background-blend-mode: color;
   background-clip: text;
   margin: 0 auto;
 }
@@ -366,6 +376,7 @@ footer ul {
 
 .contact-link li {
   margin: 15px;
+  transition: 0.3s;
 }
 
 .contact-link img {
@@ -375,4 +386,16 @@ footer ul {
 footer a {
   color: var(--dark-moderate-cyan);
   font-weight: var(--medium);
+}
+
+footer a:hover {
+  color: var(--very-dark-desaturated-blue);
+}
+
+.contact-link li:hover {
+  border: var(--dark-desaturated-cyan) solid 2px;
+  border-radius: 25px;
+  padding: 10px;
+  top: 10px;
+  transform: scale(1.5);
 }
