@@ -145,6 +145,7 @@ a:hover > .nav-contact {
 }
 
 .menu {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -161,6 +162,11 @@ a:hover > .nav-contact {
 
 .ham-active {
   opacity: 50%;
+  position: absolute;
+  right: -40px;
+  padding: 10000px;
+  padding-right: 40px;
+  box-sizing: content-box;
 }
 
 /* Hero section */
@@ -210,7 +216,7 @@ a:hover > .nav-contact {
 }
 
 .persuade h2,
-.persuade button {
+.persuade button a {
   font-family: var(--styling-font);
   font-weight: var(--bold);
   color: var(--very-dark-desaturated-blue);
@@ -353,9 +359,10 @@ footer {
 }
 
 .footer-logo {
-  width: 60%;
+  width: 250px;
   background-clip: text;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 footer ul {
@@ -389,13 +396,167 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--very-dark-desaturated-blue);
+  color: white;
+  transition: 0.3s;
 }
 
 .contact-link li:hover {
-  border: var(--dark-desaturated-cyan) solid 2px;
-  border-radius: 25px;
+  fill: white;
   padding: 10px;
-  top: 10px;
+  padding-top: 0;
   transform: scale(1.5);
+}
+
+@media (min-width: 601px) {
+  body {
+    font-size: 1.25rem;
+  }
+
+  nav {
+    padding: 35px;
+    height: 100px;
+  }
+
+  .nav-list {
+    left: 7.5%;
+    bottom: -420px;
+    width: 85%;
+    padding: 60px 0;
+  }
+
+  .logo {
+    width: 11rem;
+  }
+
+  .hamburger {
+    width: 2rem;
+  }
+
+  .statement {
+    font-size: 3.5rem;
+    line-height: 1.5;
+  }
+
+  .persuade h2 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 50px;
+    padding: 0 50px;
+  }
+
+  .persuade p {
+    margin-bottom: 30px;
+    padding: 0 50px;
+  }
+
+  .persuade button {
+    font-size: 1.25rem;
+  }
+
+  .stand-out div,
+  .transform div {
+    height: 500px;
+    padding-top: 70px;
+  }
+
+  .skill {
+    font-size: 1.25rem;
+  }
+
+  .skill h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+
+  .graphic-design div,
+  .photography div {
+    bottom: 100px;
+    padding: 0 40px;
+  }
+
+  .testimonial {
+    padding: 0 50px;
+  }
+
+  .testimonial h2 {
+    font-size: 1.5rem;
+    margin: 70px;
+  }
+
+  .testimonial img {
+    width: 120px;
+  }
+
+  .person {
+    font-size: 1.5rem;
+    line-height: 3;
+  }
+
+  .footer-link {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 951px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+    height: 100px;
+    z-index: 3;
+  }
+
+  .nav-list {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    margin-left: 650px;
+  }
+
+  .nav-list::before {
+    visibility: hidden;
+  }
+
+  .nav-item {
+    color: white;
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 25px;
+  }
+
+  .nav-contact {
+    color: var(--very-dark-desaturated-blue);
+    background: white;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .nav-contact:hover {
+    color: white;
+    background-color: skyblue;
+    border-radius: 25px;
+  }
+
+  .nav-link:hover {
+    background-color: transparent;
+    color: var(--very-dark-desaturated-blue);
+  }
+
+  a:hover > .nav-contact {
+    border-radius: 25px;
+  }
+
+  .hamburger {
+    visibility: hidden;
+  }
 }
