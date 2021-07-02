@@ -42,6 +42,7 @@
 }
 
 body {
+  overflow-x: hidden;
   background-color: white;
   font-family: var(--main-font);
   font-size: 18px;
@@ -433,7 +434,7 @@ footer a:hover {
   }
 
   .statement {
-    font-size: 3.5rem;
+    font-size: 4.25rem;
     line-height: 1.5;
   }
 
@@ -503,7 +504,9 @@ footer a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 35px;
+    /* width: 100vw; */
     height: 100px;
     z-index: 3;
   }
@@ -558,5 +561,125 @@ footer a:hover {
 
   .hamburger {
     visibility: hidden;
+  }
+
+  .hero-image {
+    width: 100vw;
+  }
+
+  .statement {
+    font-size: 3.5rem;
+  }
+
+  .transform,
+  .stand-out {
+    display: flex;
+    align-items: center;
+  }
+
+  .transform {
+    flex-direction: row-reverse;
+  }
+
+  .transform img,
+  .stand-out img {
+    height: 100%;
+    width: 50vw;
+  }
+
+  .persuade .transform,
+  .persuade .stand-out {
+    width: 100vw;
+  }
+
+  .persuade h2 {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 30px;
+    margin-top: 0;
+    padding: 0 50px;
+  }
+
+  .persuade p {
+    margin-bottom: 10px;
+    padding: 0 50px;
+  }
+
+  .persuade button {
+    font-size: 1rem;
+  }
+
+  .stand-out div,
+  .transform div {
+    padding-top: 20px;
+    height: 300px;
+    width: 50vw;
+    margin: 0;
+  }
+
+  .skill {
+    display: flex;
+    width: 100vw;
+  }
+
+  .graphic-design,
+  .photography {
+    width: 50vw;
+  }
+
+  .skill h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .graphic-design div {
+    bottom: 50px;
+  }
+
+  .photography div {
+    bottom: 70px;
+  }
+
+  .testimonial {
+    padding: 0 50px;
+  }
+
+  .testimonial div {
+    display: flex;
+  }
+
+  .testimonial h2 {
+    font-size: 1.5rem;
+    margin: 70px;
+  }
+
+  .testimonial p {
+    padding: 0 20px;
+  }
+
+  .testimonial img {
+    width: 100px;
+  }
+
+  .person {
+    font-size: 1.25rem;
+    line-height: 3;
+  }
+
+  .gallery {
+    display: flex;
+    width: 100vw;
+  }
+
+  footer {
+    width: 100vw;
+  }
+
+  .footer-link {
+    justify-content: center;
+  }
+
+  .footer-link li {
+    margin: 0 30px;
   }
 }
