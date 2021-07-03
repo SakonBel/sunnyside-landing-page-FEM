@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Screenshot
 
-![./project/Desktop-Sunnyside-Agency.png]
-![./project/Mobile-Sunnyside-Agency.png]
+![](./project/Desktop-Sunnyside-Agency.png)
+![](./project/Mobile-Sunnyside-Agency.png)
 
 ### Links
 
