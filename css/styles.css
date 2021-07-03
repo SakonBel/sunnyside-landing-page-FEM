@@ -402,10 +402,18 @@ footer a:hover {
 }
 
 .contact-link li:hover {
-  fill: white;
   padding: 10px;
   padding-top: 0;
   transform: scale(1.5);
+}
+
+.icon {
+  fill: #2c7566;
+  transform: scale(1.25);
+}
+
+.icon:hover {
+  fill: white;
 }
 
 @media (min-width: 601px) {
@@ -456,8 +464,8 @@ footer a:hover {
 
   .stand-out div,
   .transform div {
-    height: 500px;
-    padding-top: 70px;
+    height: 600px;
+    padding-top: 15%;
   }
 
   .skill {
@@ -506,7 +514,6 @@ footer a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 35px;
-    /* width: 100vw; */
     height: 100px;
     z-index: 3;
   }
@@ -571,6 +578,11 @@ footer a:hover {
     font-size: 3.5rem;
   }
 
+  .arrow {
+    width: 2.5rem;
+    top: 45%;
+  }
+
   .transform,
   .stand-out {
     display: flex;
@@ -590,28 +602,31 @@ footer a:hover {
   .persuade .transform,
   .persuade .stand-out {
     width: 100vw;
+    text-align: left;
   }
 
   .persuade h2 {
+    width: 100%;
     font-size: 2rem;
     line-height: 1;
-    margin-bottom: 30px;
-    margin-top: 0;
-    padding: 0 50px;
+    margin: 0 0 30px;
+    padding: 0 15%;
   }
 
   .persuade p {
     margin-bottom: 10px;
-    padding: 0 50px;
+    padding: 0 15%;
   }
 
   .persuade button {
     font-size: 1rem;
+    margin-left: 15%;
+    margin-right: auto;
   }
 
   .stand-out div,
   .transform div {
-    padding-top: 20px;
+    padding-top: 10px;
     height: 300px;
     width: 50vw;
     margin: 0;
@@ -641,7 +656,8 @@ footer a:hover {
   }
 
   .testimonial {
-    padding: 0 50px;
+    padding: 50px;
+    padding-bottom: 100px;
   }
 
   .testimonial div {
@@ -681,5 +697,69 @@ footer a:hover {
 
   .footer-link li {
     margin: 0 30px;
+  }
+}
+
+@media (min-width: 1301px) {
+  nav {
+    padding-right: 70px;
+  }
+  .nav-list {
+    margin-left: 550px;
+  }
+
+  .nav-item {
+    padding: 10px;
+    margin: 20px;
+  }
+
+  .nav-contact {
+    margin-left: 40px;
+  }
+
+  .statement {
+    font-size: 4.25rem;
+  }
+
+  .arrow {
+    width: 3rem;
+    top: 45%;
+  }
+
+  .persuade h2 {
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 40px;
+    margin-top: 0;
+    padding: 0 20%;
+  }
+
+  .persuade p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding: 0 20%;
+  }
+
+  .persuade button {
+    font-size: 1.25rem;
+    margin-left: 20%;
+  }
+
+  .skill h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .graphic-design div {
+    bottom: 100px;
+  }
+
+  .photography div {
+    bottom: 100px;
+  }
+
+  .testimonial {
+    padding: 100px;
+    padding-bottom: 200px;
   }
 }

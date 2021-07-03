@@ -1,21 +1,27 @@
+// Grab navbar element
 const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const navMenu = document.querySelector(".nav-list");
 const navItem = document.querySelector("nav ul");
 const hamburger = document.querySelector(".hamburger");
 
+// Initiate variable
 let scrollEndTop = 0;
 let status = {
   active: false,
 };
 let vanish;
+let navbar;
 
+// Add event
 hamburger.addEventListener("click", () => toggleMenu(status.active));
-
 window.addEventListener("scroll", scrollEffect);
+window.addEventListener("resize", hideNavbarEffect);
 
+// Declare function to be used in event
+
+// fucntion for toggle navbar
 function toggleMenu(active, zone) {
-  // body.classList.toggle("clickable");
   navMenu.classList.toggle("nav-active");
   hamburger.classList.toggle("ham-active");
   navItem.classList.toggle("nav-item-active");
@@ -23,6 +29,7 @@ function toggleMenu(active, zone) {
   clearTimeout(vanish);
 }
 
+// function for making navbar disappear when not clicked
 function slideNav() {
   clearTimeout(vanish);
   vanish = setTimeout(() => {
@@ -30,6 +37,7 @@ function slideNav() {
   }, 2000);
 }
 
+// function for making navbar disappear when scroll
 function scrollEffect() {
   let scrollTop = window.pageYOffset;
 
@@ -52,4 +60,20 @@ function scrollEffect() {
     }
   }
   scrollEndTop = scrollTop;
+}
+
+// function for hiding navbar transition on changing viewport
+function hideNavbarEffect() {
+  nav.style.transition = "0s";
+  navMenu.style.transition = "0s";
+  showNavbarEffect();
+}
+
+// function that terminate timeout transition effect
+function showNavbarEffect() {
+  clearTimeout(navbar);
+  navbar = setTimeout(() => {
+    nav.style.transition = "0.5s";
+    navMenu.style.transition = "0.3s";
+  }, 200);
 }
